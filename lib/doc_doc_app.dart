@@ -7,7 +7,7 @@ class DocDocApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: : "Doc Doc",
+      title:"Doc Doc",
     );
   }
 }
