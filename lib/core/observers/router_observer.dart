@@ -1,7 +1,7 @@
 import 'package:docdoc/core/utils/colored_logs.dart';
 import 'package:flutter/material.dart';
 
-class RouterObserver extends RouteObserver<PageRoute<dynamic>> {
+class RouterObserver extends NavigatorObserver {
   @override
   void didPush(Route<dynamic> route, Route<dynamic>? previousRoute) {
     super.didPush(route, previousRoute);
