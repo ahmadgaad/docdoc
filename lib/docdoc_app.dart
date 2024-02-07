@@ -1,6 +1,7 @@
 import 'package:docdoc/core/observers/router_observer.dart';
-import 'package:docdoc/core/routing/doc_router.dart';
+import 'package:docdoc/core/routing/docdoc_router.dart';
 import 'package:docdoc/core/routing/route_paths.dart';
+import 'package:docdoc/core/themes/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -14,10 +15,14 @@ class DocDocApp extends StatelessWidget {
       minTextAdapt: true,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primaryColor: ColorUtils.primary,
+          scaffoldBackgroundColor: Colors.white,
+        ),
         title: "Doc Doc",
         navigatorObservers: [RouterObserver()],
         initialRoute: RoutePaths.onboardingScreen,
-        onGenerateRoute: DocRouter.generateRoute,
+        onGenerateRoute: DocDocRouter.generateRoute,
       ),
     );
   }
