@@ -1,4 +1,3 @@
-import 'package:docdoc/core/extensions/gap.dart';
 import 'package:docdoc/core/themes/styles.dart';
 import 'package:docdoc/features/onboarding/presentation/view/widgets/docdoc_log_and_name.dart';
 import 'package:docdoc/features/onboarding/presentation/view/widgets/doctor_image_and_text.dart';
@@ -19,7 +18,7 @@ class OnboardingScreen extends StatelessWidget {
             child: Column(
               children: [
                 const DocDocLogoAndName(),
-                30.ph,
+                30.verticalSpace,
                 const DoctorImageAndText(),
                 Padding(
                   padding: EdgeInsetsDirectional.only(
@@ -32,9 +31,9 @@ class OnboardingScreen extends StatelessWidget {
                       Text(
                         "Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.",
                         textAlign: TextAlign.center,
-                        style: TextStyles.font13Grey400Weight,
+                        style: TextStyles.font13GreyRegular,
                       ),
-                      30.ph,
+                      30.verticalSpace,
                       const GetStartedButton(),
                     ],
                   ),
