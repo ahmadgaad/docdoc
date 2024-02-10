@@ -2,6 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 extension Gap on num {
-  SizedBox get ph => SizedBox(height: toDouble().h);
-  SizedBox get pw => SizedBox(width: toDouble().w);
+  SizedBox get verticalSpace => SizedBox(height: toDouble().h);
+  SizedBox get horizontalSpace => SizedBox(width: toDouble().w);
 }

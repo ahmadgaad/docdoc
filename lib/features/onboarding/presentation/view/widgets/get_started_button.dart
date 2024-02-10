@@ -1,3 +1,5 @@
+import 'package:docdoc/core/extensions/navigation.dart';
+import 'package:docdoc/core/routing/route_paths.dart';
 import 'package:docdoc/core/themes/colors.dart';
 import 'package:docdoc/core/themes/styles.dart';
 import 'package:flutter/material.dart';
@@ -16,10 +18,12 @@ class GetStartedButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
         ),
       ),
-      onPressed: () {},
+      onPressed: () {
+        context.pushNamed(RoutePaths.loginScreen);
+      },
       child: Text(
         "Get Started",
-        style: TextStyles.font16White600Weight,
+        style: TextStyles.font16WhiteSemiBold,
       ),
     );
   }
