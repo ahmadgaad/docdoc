@@ -75,4 +75,16 @@ class TextStyles {
     color: ColorUtils.darkBlue,
     fontWeight: FontWeightHelper.medium,
   );
+
+  static TextStyle font15DarkBlueMedium = TextStyle(
+    fontSize: 15.sp,
+    color: ColorUtils.darkBlue,
+    fontWeight: FontWeightHelper.medium,
+  );
+  
+  static TextStyle font14BlueSemiBold = TextStyle(
+    fontSize: 14.sp,
+    color: ColorUtils.primary,
+    fontWeight: FontWeightHelper.semiBold,
+  );
 }
