@@ -12,7 +12,7 @@ extension Navigation on BuildContext {
 
   Future<dynamic> pushNamedAndRemoveUntil(
     String newRouteName,
-    bool Function(Route<dynamic>) predicate, {
+    bool Function(Route<dynamic> route) predicate, {
     Object? arguments,
   }) {
     return Navigator.of(this).pushNamedAndRemoveUntil(

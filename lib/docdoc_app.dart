@@ -1,6 +1,6 @@
 import 'package:docdoc/core/observers/router_observer.dart';
-import 'package:docdoc/core/routing/docdoc_router.dart';
-import 'package:docdoc/core/routing/route_paths.dart';
+import 'package:docdoc/core/router/docdoc_router.dart';
+import 'package:docdoc/core/router/route_paths.dart';
 import 'package:docdoc/core/themes/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

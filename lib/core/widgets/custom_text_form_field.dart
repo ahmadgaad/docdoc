@@ -9,6 +9,7 @@ class CustomTextFormField extends StatelessWidget {
   final bool? isObsecureText;
   final EdgeInsetsGeometry? contentPadding;
   final String hintText;
+  final Function(String? value) validator;
   final TextStyle? hintStyle;
 
   const CustomTextFormField({
@@ -16,6 +17,7 @@ class CustomTextFormField extends StatelessWidget {
     this.controller,
     this.contentPadding,
     required this.hintText,
+    required this.validator,
     this.suffixIcon,
     this.isObsecureText,
     this.hintStyle,
@@ -26,6 +28,9 @@ class CustomTextFormField extends StatelessWidget {
     return TextFormField(
       onTapOutside: (e) => FocusScope.of(context).unfocus(),
       controller: controller,
+      validator: (value) {
+        return validator(value);
+      },
       decoration: InputDecoration(
         isDense: true,
         contentPadding: contentPadding ??
@@ -44,6 +49,20 @@ class CustomTextFormField extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
           borderSide: const BorderSide(
             color: ColorUtils.primary,
+            width: 1.3,
+          ),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16.0),
+          borderSide: const BorderSide(
+            color: Colors.red,
+            width: 1.3,
+          ),
+        ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16.0),
+          borderSide: const BorderSide(
+            color: Colors.red,
             width: 1.3,
           ),
         ),

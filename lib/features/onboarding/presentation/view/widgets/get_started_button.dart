@@ -1,5 +1,5 @@
 import 'package:docdoc/core/extensions/navigation.dart';
-import 'package:docdoc/core/routing/route_paths.dart';
+import 'package:docdoc/core/router/route_paths.dart';
 import 'package:docdoc/core/themes/colors.dart';
 import 'package:docdoc/core/themes/styles.dart';
 import 'package:flutter/material.dart';
