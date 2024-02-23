@@ -13,7 +13,7 @@ class LoginCubit extends Cubit<LoginState> {
   final passwordController = TextEditingController();
 
   Future<void> login() async {
-    emit(const LoginState.loading());
+    emit(const LoginState.loginLoading());
     final result = await _loginRepo.login(
       LoginRequestBody(
         email: emailController.text,
@@ -22,11 +22,11 @@ class LoginCubit extends Cubit<LoginState> {
     );
     result.when(
       success: (loginResponse) {
-        emit(LoginState.success(loginResponse));
+        emit(LoginState.loginSuccess(loginResponse));
       },
       failure: (error) {
         emit(
-          LoginState.error(error: error.apiErrorModel.message ?? ''),
+          LoginState.loginError(error: error.apiErrorModel.message ?? ''),
         );
       },
     );

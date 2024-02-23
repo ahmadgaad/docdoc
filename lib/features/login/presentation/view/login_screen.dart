@@ -25,10 +25,12 @@ class LoginScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: BlocListener<LoginCubit, LoginState>(
             listenWhen: (previous, current) =>
-                current is Loading || current is Success || current is Error,
+                current is LoginLoading ||
+                current is LoginSuccess ||
+                current is LoginError,
             listener: (context, state) {
               state.whenOrNull(
-                loading: () {
+                loginLoading: () {
                   showDialog(
                     context: context,
                     builder: (_) {
@@ -40,14 +42,14 @@ class LoginScreen extends StatelessWidget {
                     },
                   );
                 },
-                success: (loginResponse) {
+                loginSuccess: (loginResponse) {
                   context.pop();
                   context.pushNamedAndRemoveUntil(
                     RoutePaths.homeScreen,
                     (route) => true,
                   );
                 },
-                error: (error) {
+                loginError: (error) {
                   showCustomError(context, error);
                 },
               );

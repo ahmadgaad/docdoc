@@ -11,7 +11,7 @@ Map<String, dynamic> _$SignUpRequestBodyToJson(SignUpRequestBody instance) =>
       'name': instance.name,
       'email': instance.email,
       'phone': instance.phone,
-      'gender': instance.gender,
       'password': instance.password,
       'password_confirmation': instance.passwordConfirmation,
+      'gender': instance.gender,
     };

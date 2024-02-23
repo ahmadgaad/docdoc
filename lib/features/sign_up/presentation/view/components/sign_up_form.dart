@@ -81,7 +81,7 @@ class _SignUpFormState extends State<SignUpForm> {
             context.pop();
             context.pushNamedAndRemoveUntil(
               RoutePaths.homeScreen,
-              (route) => true,
+              (route) => false,
             );
           },
           error: (error) {
@@ -198,6 +198,7 @@ class _SignUpFormState extends State<SignUpForm> {
                           password: passwordController.text,
                           passwordConfirmation:
                               passwordConfirmationController.text,
+                          gender: 0,
                         ),
                       );
                 }

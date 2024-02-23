@@ -24,9 +24,10 @@ class SignUpResponse {
 @JsonSerializable()
 class User {
   final String token;
+  @JsonKey(name: 'username')
   final String user;
 
-  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
-
   User({required this.token, required this.user});
+
+  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 }
