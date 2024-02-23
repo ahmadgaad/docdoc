@@ -6,7 +6,7 @@ import 'package:docdoc/core/themes/styles.dart';
 import 'package:docdoc/core/widgets/custom_elevated_button.dart';
 import 'package:docdoc/features/login/presentation/controller/login_cubit.dart';
 import 'package:docdoc/features/login/presentation/controller/login_state.dart';
-import 'package:docdoc/features/login/presentation/view/components/already_have_account_text.dart';
+import 'package:docdoc/features/login/presentation/view/components/dont_have_account_text.dart';
 import 'package:docdoc/features/login/presentation/view/components/email_and_password.dart';
 import 'package:docdoc/features/login/presentation/view/components/terms_and_conditions_text.dart';
 import 'package:flutter/material.dart';
@@ -89,7 +89,7 @@ class LoginScreen extends StatelessWidget {
                     16.verticalSpace,
                     const TermsAndConditionsText(),
                     50.verticalSpace,
-                    const AlreadyHaveAccountText(),
+                    const DontHaveAccountText(),
                   ],
                 ),
               ],

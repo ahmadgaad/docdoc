@@ -1,7 +1,7 @@
 import 'package:docdoc/core/themes/styles.dart';
-import 'package:docdoc/features/onboarding/presentation/view/widgets/docdoc_log_and_name.dart';
-import 'package:docdoc/features/onboarding/presentation/view/widgets/doctor_image_and_text.dart';
-import 'package:docdoc/features/onboarding/presentation/view/widgets/get_started_button.dart';
+import 'package:docdoc/features/onboarding/components/docdoc_log_and_name.dart';
+import 'package:docdoc/features/onboarding/components/doctor_image_and_text.dart';
+import 'package:docdoc/features/onboarding/components/get_started_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

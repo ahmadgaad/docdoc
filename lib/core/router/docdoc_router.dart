@@ -3,7 +3,9 @@ import 'package:docdoc/core/router/route_paths.dart';
 import 'package:docdoc/features/home/presentation/view/home_screen.dart';
 import 'package:docdoc/features/login/presentation/controller/login_cubit.dart';
 import 'package:docdoc/features/login/presentation/view/login_screen.dart';
-import 'package:docdoc/features/onboarding/presentation/view/onboarding_screen.dart';
+import 'package:docdoc/features/onboarding/onboarding_screen.dart';
+import 'package:docdoc/features/sign_up/presentation/controller/sign_up_cubit.dart';
+import 'package:docdoc/features/sign_up/presentation/view/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -25,6 +27,14 @@ class DocDocRouter {
             child: const LoginScreen(),
           ),
           settings: const RouteSettings(name: RoutePaths.loginScreen),
+        );
+      case RoutePaths.signUpScreen:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => sl<SignUpCubit>(),
+            child: const SignUpScreen(),
+          ),
+          settings: const RouteSettings(name: RoutePaths.signUpScreen),
         );
       case RoutePaths.homeScreen:
         return MaterialPageRoute(
