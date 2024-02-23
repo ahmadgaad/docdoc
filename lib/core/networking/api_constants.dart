@@ -5,13 +5,13 @@ class ApiConstants {
 
   /// Authentication EndPoints
   static const String login = "auth/login";
-  static const String register = "auth/register";
+  static const String signUp = "auth/register";
   static const String logout = "auth/logout";
 }
 
 class ApiErrors {
   ApiErrors._();
-  
+
   static const String badRequestError = "badRequestError";
   static const String noContent = "noContent";
   static const String forbiddenError = "forbiddenError";

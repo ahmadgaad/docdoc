@@ -2,7 +2,7 @@ import 'package:docdoc/core/helpers/regex.dart';
 import 'package:docdoc/core/themes/colors.dart';
 import 'package:docdoc/core/widgets/custom_text_form_field.dart';
 import 'package:docdoc/features/login/presentation/controller/login_cubit.dart';
-import 'package:docdoc/features/login/presentation/view/components/password_validations.dart';
+import 'package:docdoc/core/widgets/password_validations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
